@@ -1,11 +1,12 @@
 import numpy as np
 from numpy.random import randn, rand
+import matplotlib.pyplot as plt
 
 mu = 0.001
 n = 3
 w = rand(n)
 x = np.zeros(n)
-epochs = 100
+epochs = 300
 
 x1 = np.array([7, 9, 11.5, 14, 18, 25, 35.5], dtype=float).T
 x2 = np.array([0.4, 0.75, 1.5, 2.5, 4.5, 7.5, 10.5], dtype=float).T
@@ -39,3 +40,10 @@ for i in range(len(w) - 1):
 print dosis
 
 
+plt.figure()
+plt.plot(range(1, epochs + 1), SSE, 'k'), plt.title(
+    'Training performance, SSE at every training epoch'), plt.xlabel('epoch'), plt.ylabel('SSE'), plt.grid()
+plt.figure()
+plt.plot(yr, 'b'), plt.title('Real Value (Blue) vs Model (Green) output'), plt.xlabel('k'), plt.ylabel('ml')
+plt.plot(yn, 'g'), plt.grid()
+plt.show()
