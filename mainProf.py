@@ -17,17 +17,25 @@ e = np.zeros(np.size(yr)).T
 SSE = np.zeros(epochs)
 
 for epoch in range(0, epochs):
-    for k in range(0, np.size(yr)): #ciclo para cada sample k de los datos de entrenamiento hasta el (tamano de yr)-1
-        x = np.array([1, x1[k], x2[k]]).T # generamos cada vector de x en cada sample k
+    for k in range(0, np.size(yr)):  # ciclo para cada sample k de los datos de entrenamiento hasta el (tamano de yr)-1
+        x = np.array([1, x1[k], x2[k]]).T  # generamos cada vector de x en cada sample k
         yn[k] = 0
         for i in range(len(w) - 1):
             yn[k] = yn[k] + w[i] * x[i]
         e[k] = yr[k] - yn[k]
-        w = mu * e[k] * x + w
+        # w = mu * e[k] * x + w  # actualizacion de los pesos sample by sample (u online learning)
+        w = mu * e[k] * x.T + w  # actualizacion de los pesos sample by sample (u online learning)
     SSE[epoch] = sum(e * e)
     if epoch % 10 == 0 or epoch < 10:
         print str(epoch) + ":" + str(SSE[epoch])
 
 print "Training Finished"
+print "Found weights " + str(w)
+
+xt = np.array([1, 60, 15]).T  # generamos cada vector de x en cada sample k
+dosis = 0
+for i in range(len(w) - 1):
+    dosis = dosis + w[i] * xt[i]
+print dosis
 
 
