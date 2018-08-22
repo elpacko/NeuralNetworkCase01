@@ -2,7 +2,11 @@ import numpy as np
 from numpy.random import randn, rand
 import matplotlib.pyplot as plt
 
-mu = 0.001
+plt.clf()
+plt.cla()
+plt.close()
+
+mu = 0.0001
 n = 3
 w = rand(n)
 x = np.zeros(n)

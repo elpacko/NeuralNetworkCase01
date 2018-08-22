@@ -61,4 +61,10 @@ for currentEpoch in range(epochStop):
     print str(currentEpoch) + ':' + str(error)
     if error < errorStop:
         break
-    w = calculateW(x, w[0], e, 0.01)
+    w = calculateW(x, w, e, 0.0001)
+xt = np.array([1, 60, 15]).T  # generamos cada vector de x en cada sample k
+dosis = 0
+w = np.squeeze(np.asarray(w))
+for i in range(len(w) - 1):
+    dosis = dosis + w[i] * xt[i]
+print dosis
