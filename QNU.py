@@ -5,14 +5,14 @@ import matplotlib.pyplot as plt
 # Quadratic Neuronal Unit
 
 
-mu = 0.0000001  # learning rate
+mu = 0.000001  # learning rate
 n = 3  # 2 x values + Bias
 nw = (n ** 2 + n) / 2  # Number of Weights
-colw = (rand(nw)).T  # Weight Column
+colw = randn(nw).T / 1000000000000  # Weight Column
+print (colw)
 colDw = (np.zeros(nw)).T  # column with Deltas of Weights
 rawx = np.zeros(nw)  # row of correlated  x values
-epochs = 10000
-
+epochs = 4000
 
 x1 = np.array([7, 9, 11.5, 14, 18, 25, 35.5], dtype=float).T  # weight of child
 x2 = np.array([0.4, 0.75, 1.5, 2.5, 4.5, 7.5, 10.5], dtype=float).T  # age of child
@@ -46,7 +46,7 @@ for epoch in range(0, epochs):
                 pom = pom + 1
         colw = colDw + colw
         SSE[epoch] = sum(e * e)
-        if epoch % 10 == 0 or epoch < 10:
+        if epoch % 1000 == 0 or epoch < 10:
             print(SSE[epoch])
 plt.figure()
 plt.plot(range(1, epochs + 1), SSE, 'k'), plt.title(
