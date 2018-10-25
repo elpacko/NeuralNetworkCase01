@@ -10,10 +10,18 @@ plt.close()
 
 mu = 0.01
 n = 3
-w = rand(n)
+
 x = np.zeros(n)
 #capa oculta
 n0 = 3  #numero de neuronas en la capa oculta
+W = np.random.rand([n0, n])  # matriz de pesos w inicializando de manera aleatorea
+DW = np.zeros(n0, n)
+
+#capa de salida
+wout = rand(n0)
+Dwout = np.zeros(n0)
+yk = np.zeros(n0).T
+
 
 
 epochs = 3000
@@ -56,12 +64,15 @@ for epoch in range(0, epochs):
         yn[k] = 0
         #for i in range(len(w) - 1):
         #    yn[k] = yn[k] + w[i] * x[i]
-        z = sum(w*x)
-        yn[k] = (2.0000/(1.00000 + np.exp(-float(z))))-1.00000
+        z = sum(W*x)
+        #yn[k] = (2.0000/(1.00000 + np.exp(-float(z))))-1.00000
+        yk = (2.0000 / (1.00000 + np.exp(-float(z)))) - 1.00000
+        yn[k] = wout * yk  #salida neuronal
         e[k] = yr[k] - yn[k]
         # w = mu * e[k] * x + w  # actualizacion de los pesos sample by sample (u online learning)
-        dw = mu * e[k] * ((2*x.T*np.exp(-z))/((1+np.exp(-z))**2))  # + w  # actualizacion de los pesos sample by sample (u online learning), aqui va el resultado de la derivada
-        w = dw + w
+        DW = mu * e[k] * x * wout * ((2*x.T*np.exp(-z))/((1+np.exp(-z))**2))  # + w  # actualizacion de los pesos sample by sample (u online learning), aqui va el resultado de la derivada
+        Dwout = mu * e[k] * yk  #incremento de los pesos de salida
+        w = DW + w
     SSE[epoch] = sum(e * e)
     if epoch % 10 == 0 or epoch < 10:
         print str(epoch) + ":" + str(SSE[epoch])
