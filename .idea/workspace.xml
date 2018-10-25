@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdf220ad-3431-4b5e-9189-a9ffa22625bc" name="Default Changelist" comment="Modified learnin rate and added a division">
-      <change afterPath="$PROJECT_DIR$/CubicNeuralNetowrk.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Perceptron.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PerceptronMulticapa.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CASE OF STUDY.docx" beforeDir="false" afterPath="$PROJECT_DIR$/CASE OF STUDY.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QNU.py" beforeDir="false" afterPath="$PROJECT_DIR$/QNU.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainProf.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainProf.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,37 +16,37 @@
     <session id="-1374874019">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.open.time.9" value="3" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4639" />
-          <entry key="txt" value="259" />
+          <entry key="py" value="4708" />
+          <entry key="txt" value="310" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="259" />
-          <entry key="Python" value="4639" />
+          <entry key="PLAIN_TEXT" value="310" />
+          <entry key="Python" value="4708" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="10" />
+          <entry key="Python" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="10" />
+          <entry key="py" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -57,59 +54,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-479">
-              <caret column="10" selection-start-column="10" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainProf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" selection-end-line="53" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Perceptron.py">
+        <entry file="file://$PROJECT_DIR$/PerceptronMulticapa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/QNU.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-274">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CubicNeuralNetowrk.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="87" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -143,19 +92,21 @@
         <option value="$PROJECT_DIR$/mainProf.py" />
         <option value="$PROJECT_DIR$/CubicNeuralNetowrk.py" />
         <option value="$PROJECT_DIR$/Perceptron.py" />
+        <option value="$PROJECT_DIR$/PerceptronMulticapa.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="22" />
-    <option name="width" value="1920" />
-    <option name="height" value="1138" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="737" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,7 +118,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -192,7 +142,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Perceptron">
+  <component name="RunManager" selected="Python.PerceptronMulticapa">
     <configuration name="CubicNN" type="PythonConfigurationType" factoryName="Python">
       <module name="NeuralNetworkCase01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -256,6 +206,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="PerceptronMulticapa" type="PythonConfigurationType" factoryName="Python">
+      <module name="NeuralNetworkCase01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PerceptronMulticapa.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="QNU" type="PythonConfigurationType" factoryName="Python">
       <module name="NeuralNetworkCase01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -304,6 +275,7 @@
       <item itemvalue="Python.QNU" />
       <item itemvalue="Python.Perceptron" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.PerceptronMulticapa" />
     </list>
     <recent_temporary>
       <list>
@@ -357,19 +329,26 @@
       <option name="project" value="LOCAL" />
       <updated>1535590945151</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Perceptron using simoid function and cubic NN">
+      <created>1538617877633</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1538617877633</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="737" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="737" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1898332" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13264495" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49960285" visible="true" weight="0.32868218" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960285" weight="0.18761063" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42635658" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -411,7 +390,8 @@
     <MESSAGE value="Added Plot of Error per epoch &#10;and comparison of initial Y values  vs neuronal output" />
     <MESSAGE value="Modified Mu value" />
     <MESSAGE value="Added Quadratic Neural Unit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Quadratic Neural Unit" />
+    <MESSAGE value="Added Perceptron using simoid function and cubic NN" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Perceptron using simoid function and cubic NN" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -507,14 +487,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-479">
+        <state>
           <caret column="10" selection-start-column="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mainProf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
+        <state relative-caret-position="555">
           <caret line="39" selection-end-line="53" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -524,7 +504,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/QNU.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-274">
+        <state relative-caret-position="255">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -534,8 +514,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CubicNeuralNetowrk.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="87" />
+        <state relative-caret-position="990">
+          <caret line="68" selection-start-line="68" selection-end-line="87" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -544,11 +524,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Perceptron.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="104">
+          <caret line="71" column="11" lean-forward="true" selection-end-line="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PerceptronMulticapa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
         </state>
       </provider>
     </entry>
