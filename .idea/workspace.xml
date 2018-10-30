@@ -15,7 +15,7 @@
     <session id="-1374874019">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -28,14 +28,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="5015" />
-          <entry key="txt" value="361" />
+          <entry key="py" value="5267" />
+          <entry key="txt" value="397" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="361" />
-          <entry key="Python" value="5015" />
+          <entry key="PLAIN_TEXT" value="397" />
+          <entry key="Python" value="5267" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -56,8 +56,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PerceptronMulticapa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="73" column="66" selection-start-line="73" selection-start-column="66" selection-end-line="73" selection-end-column="66" />
+            <state relative-caret-position="252">
+              <caret line="73" column="86" selection-start-line="73" selection-start-column="86" selection-end-line="73" selection-end-column="86" />
+              <folding>
+                <marker date="1540433062787" expanded="true" signature="3191:3192" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,10 +78,12 @@
     <findStrings>
       <find>nw</find>
       <find>zero</find>
-      <find>w</find>
       <find>SSE</find>
       <find>rand</find>
       <find>yk</find>
+      <find>x</find>
+      <find>z</find>
+      <find>w</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -343,19 +348,25 @@
       <option name="project" value="LOCAL" />
       <updated>1540426602817</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added multilayer weights">
+      <created>1540428843022</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1540428843023</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="737" extended-state="6" />
-    <editor active="true" />
+    <frame x="853" y="268" width="1280" height="737" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13264495" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960285" weight="0.18761063" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960285" weight="0.19379845" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42635658" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -399,7 +410,8 @@
     <MESSAGE value="Added Quadratic Neural Unit" />
     <MESSAGE value="Added Perceptron using simoid function and cubic NN" />
     <MESSAGE value="Added Multilayer Peceptron based on the perceptron" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Multilayer Peceptron based on the perceptron" />
+    <MESSAGE value="Added multilayer weights" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added multilayer weights" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -409,23 +421,36 @@
           <line>83</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PerceptronMulticapa.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="w" language="Python" />
-        <watch expression="w.size" language="Python" />
-        <watch expression="w.item()" language="Python" />
-        <watch expression="np.squeeze(np.asarray(w))" language="Python" />
-        <watch expression="(2.0000/(1.00000 + np.exp(-z)))-1.00000" language="Python" />
         <watch expression="np.exp(-z)" language="Python" />
-        <watch expression="z" language="Python" />
-        <watch expression="math.exp(-z)" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>np.exp(-z)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>float(z)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>np.exp(-float(z))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>math.exp(-z)</expression-string>
         <language-id>Python</language-id>
@@ -433,11 +458,6 @@
       </expression>
       <expression>
         <expression-string>z</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>np.exp(-z)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -458,21 +478,6 @@
       </expression>
       <expression>
         <expression-string>w[0][i]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>w[i]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>w.size</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>range(len(w) - 1)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -539,8 +544,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PerceptronMulticapa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="73" column="66" selection-start-line="73" selection-start-column="66" selection-end-line="73" selection-end-column="66" />
+        <state relative-caret-position="252">
+          <caret line="73" column="86" selection-start-line="73" selection-start-column="86" selection-end-line="73" selection-end-column="86" />
+          <folding>
+            <marker date="1540433062787" expanded="true" signature="3191:3192" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

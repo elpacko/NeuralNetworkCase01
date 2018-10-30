@@ -11,20 +11,20 @@ plt.close()
 mu = 0.01
 n = 3
 
-x = np.zeros(n)
+x = np.zeros(n).T
 #capa oculta
 n0 = 3  #numero de neuronas en la capa oculta
-W = np.random.rand([n0, n])  # matriz de pesos w inicializando de manera aleatorea
-DW = np.zeros(n0, n)
-
+W = np.random.rand(n0, n)  # matriz de pesos w inicializando de manera aleatorea
+DW = np.zeros([n0, n])
+z = np.zeros([n0, n])
 #capa de salida
 wout = rand(n0)
 Dwout = np.zeros(n0)
-yk = np.zeros(n0).T
+yk = np.zeros([n0, 1], dtype=float)
 
 
 
-epochs = 3000
+epochs = 400
 dw = np.zeros(n)
 x1 = np.array([7, 9, 11.5, 14, 18, 25, 35.5], dtype=float).T #peso
 x2 = np.array([0.4, 0.75, 1.5, 2.5, 4.5, 7.5, 10.5], dtype=float).T #promedio edad
@@ -64,27 +64,34 @@ for epoch in range(0, epochs):
         yn[k] = 0
         #for i in range(len(w) - 1):
         #    yn[k] = yn[k] + w[i] * x[i]
-        z = sum(W*x)
+        z = sum(W * x)
         #yn[k] = (2.0000/(1.00000 + np.exp(-float(z))))-1.00000
-        yk = (2.0000 / (1.00000 + np.exp(-float(z)))) - 1.00000
-        yn[k] = wout * yk  #salida neuronal
+        yk = (2.0000 / (1.00000 + np.exp(-z))) - 1.00000
+        yn[k] = sum(wout * yk)  #salida neuronal
         e[k] = yr[k] - yn[k]
         # w = mu * e[k] * x + w  # actualizacion de los pesos sample by sample (u online learning)
-        DW = mu * e[k] * x * wout * ((2*x.T*np.exp(-z))/((1+np.exp(-z))**2))  # + w  # actualizacion de los pesos sample by sample (u online learning), aqui va el resultado de la derivada
+        #aqui iterar entre neuronas internas
+        DW =  np.dot (wout,(mu * e[k] * x * ((2*x.T*np.exp(-z))/((1+np.exp(-z))**2)) )) # + w  # actualizacion de los pesos sample by sample (u online learning), aqui va el resultado de la derivada
         Dwout = mu * e[k] * yk  #incremento de los pesos de salida
-        w = DW + w
+        wout = Dwout + wout  # optimizacion de los pesos de salida
+        W = DW + W
     SSE[epoch] = sum(e * e)
     if epoch % 10 == 0 or epoch < 10:
         print str(epoch) + ":" + str(SSE[epoch])
 
 print "Training Finished"
-print "Found weights " + str(w)
+print "Found weights " + str(W)
+print "Found weights out" + str(wout)
 
-xt = np.array([1, 50, 16]).T  # generamos cada vector de x en cada sample k
+x_test = np.array([1, 30, 9]).T  # generamos cada vector de x en cada sample k
 dosis = 0
-for i in range(len(w) - 1):
-    dosis = dosis + w[i] * xt[i]
-print dosis
+z = sum(W * x_test)
+# yn[k] = (2.0000/(1.00000 + np.exp(-float(z))))-1.00000
+yk = (2.0000 / (1.00000 + np.exp(-z))) - 1.00000
+dosis = sum(wout * yk)  # salida neuronal
+zyr = (dosis  * yrstd ) + yrmean
+print ("Dosis:" + str(zyr))
+
 
 
 plt.figure()
@@ -95,18 +102,18 @@ plt.plot(yr, 'b'), plt.title('Real Value (Blue) vs Model (Green) output'), plt.x
 plt.plot(yn, 'g'), plt.grid()
 plt.show()
 
+def temp():
+    respuesta = ""
+    while respuesta != "q":
+        pesoBB = input("Peso del BB en kg:")
+        edadBB = input("Edad BB:")
+        #xt = np.array([1, float(pesoBB), float(edadBB)]).T  # generamos cada vector de x en cada sample k
+        zx1 = (pesoBB - x1mean) / x1std
+        zx2 = (edadBB - x2mean) / x2std
+        xt = np.array([1, float(zx1), float(zx2)]).T  # generamos cada vector de x en cada sample k
+        dosis = 0
+        z = sum(w * xt)
+        dosis =  (2.0000 / (1.00000 + np.exp(-float(z)))) - 1.00000
 
-respuesta = ""
-while respuesta != "q":
-    pesoBB = input("Peso del BB en kg:")
-    edadBB = input("Edad BB:")
-    #xt = np.array([1, float(pesoBB), float(edadBB)]).T  # generamos cada vector de x en cada sample k
-    zx1 = (pesoBB - x1mean) / x1std
-    zx2 = (edadBB - x2mean) / x2std
-    xt = np.array([1, float(zx1), float(zx2)]).T  # generamos cada vector de x en cada sample k
-    dosis = 0
-    z = sum(w * xt)
-    dosis =  (2.0000 / (1.00000 + np.exp(-float(z)))) - 1.00000
-
-    zyr = (dosis  * yrstd ) + yrmean
-    print ("Dosis:" + str(zyr))
+        zyr = (dosis  * yrstd ) + yrmean
+        print ("Dosis:" + str(zyr))
